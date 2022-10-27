@@ -11,7 +11,7 @@
 		}
 	</script>
 
-<link rel="icon" type="image/x-icon" href="/image/logo.png">
+<link rel="icon" type="image/x-icon" href="#">
 <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
 <meta http-equiv="pragma" content="no-cache">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,129 +22,50 @@
 </head>
 
 <body>
-	<div id="presentation" style="
-	  position: fixed;
-	  width: 100%;
-	  height: 100%;
-	  background: black;
-	  display: grid;
-	  grid-template-rows: 1fr min-content;
-	  z-index: 9;
-	">
-	  <img src="image/logo.gif" style="
-	    width: 40%;
-	    height: auto;
-	    align-self: center;
-	    justify-self: center;
-	  ">
+  <div id="presentation" style="
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    z-index: 9;
+  ">
+    <img src="image/logo.gif" style="
+      width: 40%;
+      height: auto;
+      align-self: center;
+      justify-self: center;
+    ">
 
-	  <p class="cta" style="margin-bottom: 60px;">
-	    <a class="button" href="bot.html">
-	      <span data-i18n-text="Acessar Dsbots" style="
-	        background: #083a07;
-	        border: 1px solid #083a07;
-	        border-radius: 0;
-	        color: #dadaf7;
-	      "></span>
-	    </a>
-	  </p>
+    <p class="cta" style="margin-bottom: 60px;">
+      <a class="button" href="bot.html">
+        <span data-i18n-text="Acessar Dsbots" style="
+          background: #083a07;
+          border: 1px solid #083a07;
+          border-radius: 0;
+          color: #dadaf7;
+        "></span>
+      </a>
+    </p>
 
-	  <span style="display: block; font-size: 9px; line-height: 1; color: #605d5d; padding-top:15px;">
-	    AVISO: Oferecemos derivados complexos, como opções e contratos por
-	    diferença (“CFDs”). Esses produtos podem não ser adequados para todos os
-	    clientes e comercializá-los coloca você em risco. Certifique-se de
-	    compreender os seguintes riscos antes de negociar os produtos: a) você
-	    pode perder parte ou todo o dinheiro que investe na negociação, b) se a
-	    sua negociação envolver a conversão de moeda, as taxas de câmbio afetarão
-	    seus lucros e perdas. Você nunca deve negociar com dinheiro emprestado ou
-	    que não possa perder.
-	  </span>
-	</div>
-	<div class="barspinner dark">
-	    <div class="rect1"></div>
-	    <div class="rect2"></div>
-	    <div class="rect3"></div>
-	    <div class="rect4"></div>
-	    <div class="rect5"></div>
-	</div>
-	<div id="topbar">
-    <div class="wrapper show-on-load">
-		  <div class="languages">
-		    <ul id="display_language">
-		      <li>
-		        <span class="world world-white"></span>
-		        <span class="language"></span>
-		        <span class="nav-caret"></span>
-		      </li>
-		    </ul>
-		    <ul id="select_language">
-		      <li>
-		        <span class="world world-black"></span>
-		          <span class="language"></span>
-		        <span class="nav-caret"></span>
-		      </li>
-		      <li class="en">English</li>
-		      <li class="fr">Français</li>
-		      <li class="id">Indonesia</li>
-		      <li class="pl">Polish</li>
-		      <li class="pt">Português</li>
-		      <li class="ru">Русский</li>
-		      <li class="zh_cn">简体中文</li>
-		      <li class="zh_tw">繁體中文</li>
-		      <li class="es">Español</li>
-		      <li class="it">Italiano</li>
-		      <li class="vi">Tiếng Việt</li>
-		    </ul>
-		  </div>
-    </div>
-	</div>
-	<div id="header">
-		<div class="wrapper">
-            <div class="logo-wrapper">
-            <div id="binary-logo"></div>
-            <div class="dbot-banner eu-hide invisible">
-                <div class="dbot-banner__separator"></div>
-                <!--
-                TODO: Whenever banners for all languages were added replace "any-show" with "en-show" and add the related language section.
-                -->
-                    <div class="dbot-banner__icon any-show invisible">
-                        <a href="https://deriv.com/interim/dbot/?utm_source=binary-bot&utm_medium=referral&utm_campaign=deriv-launch" target="_blank">
-                            <img src="./image/web-banner-english.svg">
-                        </a>    
-                    </div>
-                    <div class="dbot-banner__icon pt-show invisible">
-                        <a href="https://deriv.com/pt/interim/dbot/?utm_source=binary-bot&utm_medium=referral&utm_campaign=deriv-launch" target="_blank">
-                            <img src="./image/web-banner-portuguese.svg">
-                        </a>    
-                    </div>
-            </div>        </div>
-    </div>
-	</div>
-	<div id="main">
-		<div>
-			<div class="content show-on-load">
-				<h1 class="center" data-i18n-text="Binary Bot"></h1>
-                <h3 class="center" data-i18n-text="Trade More Efficiently Than You Ever Thought Possible"></h3>
-      		<div id="split-container">
-                <div class="half-width top-image">
-                    <img src="image/binarylogo-puzzle.svg" alt="">
-                </div>
-                <div class="half-width index-text">
-                    <p data-i18n-text="Interested in automating your preferred strategies for trading binary options?"></p>
-    				<p data-i18n-text="Binary Bot is our leading-edge programming tool which allows you to build trading apps with a simple “jigsaw puzzle-like” drag-and-drop function."></p>
-                    <p data-i18n-text="Dream up any number of binary options trading bots, from incredibly simple formulas to vastly complex algorithms. Then let them trade for you, even while you sleep."></p>
-                </div>
-                <div class="half-width bottom-image puzzle-logo">
-                    <img src="image/binarylogo-puzzle.svg" alt="">
-                </div>
-		    </div>
-                <div class="clear">
-                    <p class="cta"><a class="button" href="bot.html"><span data-i18n-text="Begin Building a Bot Now"></span></a></p>
-                    <p class="center"><span data-i18n-text="Need further assistance?"></span> <a href="mailto:affiliates@binary.com" data-i18n-text="Contact us"></a>.</p>
-                </div>
-			</div>
-		</div>
-	</div>
-    <div id="footer"></div>
-    <script src="js/index-9cc3bfe640.min.js"></script>    <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P97C2DZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) --></body>
+    <span style="display: block; font-size: 9px; line-height: 1; color: #605d5d; padding-top:15px;">
+      AVISO: Oferecemos derivados complexos, como opções e contratos por
+      diferença (“CFDs”). Esses produtos podem não ser adequados para todos os
+      clientes e comercializá-los coloca você em risco. Certifique-se de
+      compreender os seguintes riscos antes de negociar os produtos: a) você
+      pode perder parte ou todo o dinheiro que investe na negociação, b) se a
+      sua negociação envolver a conversão de moeda, as taxas de câmbio afetarão
+      seus lucros e perdas. Você nunca deve negociar com dinheiro emprestado ou
+      que não possa perder.
+    </span>
+  </div>
+  <div class="barspinner dark">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+  </div>
+  <script src="js/index-9cc3bfe640.min.js"></script>  <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P97C2DZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) --></body>
 </html>
