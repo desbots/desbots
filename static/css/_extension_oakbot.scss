@@ -1,0 +1,128 @@
+#authorization-container {
+  background: #201e1f;
+
+  #user-login, #registration {
+    background: white;
+    border: 1px solid gray;
+
+    button[type="submit"] {
+      background: #201e1f;
+      border: 1px solid gray;
+
+      &:hover {
+        background: darken(#201e1f, 2);
+      }
+    }
+  }
+}
+
+#blocklyDiv .blocklyToolboxDiv:first-child > img {
+  margin: 20px 0 40px 0;
+  background: white;
+  padding-top: 5px;
+}
+
+#blocklyDiv .blocklyToolboxDiv:first-child {
+  background: #201e1f !important;
+
+  div {
+    padding: 20px;
+
+    &#user-data {
+      padding: 0;
+      display: grid;
+      grid-template-areas:
+        "avatar name plan"
+        "avatar email allowed";
+      position: fixed;
+      right: 24px;
+      top: 6px;
+
+      &.panel { color: white; }
+
+      #user-avatar {
+        grid-area: avatar;
+        margin: 0;
+        width: 40px;
+      }
+
+      #user-name { grid-area: name; }
+
+      #user-email {
+        grid-area: email;
+        margin: 0 30px;
+      }
+
+      #user-allowed-until { grid-area: allowed; }
+      #user-subscription-plan { grid-area: plan; }
+      #user-allowed-until, #user-subscription-plan { margin-right: 20px; }
+    }
+
+    &.side-button, a { color: white; }
+
+    &#sign-in {
+      background: green;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 15px;
+
+      &:hover { background: darken(green, 2); }
+    }
+
+    &#contact {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    &#user-logout {
+      text-align: center;
+      text-transform: uppercase;
+      background: red;
+      color: white;
+      padding: 10px 15px;
+      margin: 0 78px;
+      position: absolute;
+      bottom: 40px;
+    }
+  }
+}
+
+#active-section {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 24px;
+  padding: 10px 20px;
+  left: 210px;
+  z-index: 9;
+  background: #f2f2f2;
+  border-bottom: 0.063em solid lightgray;
+
+  &.panel {
+    color: white;
+    background: transparent;
+    border: 0;
+  }
+}
+
+#topbar {
+  top: 60px;
+  background: #201e1f;
+}
+
+#toolbox { top: 83px; }
+
+#topbar, #toolbox {
+  left: 250px;
+  width: calc(100% - 290px);
+}
+
+#header {
+  right: 60px;
+  top: 86px;
+}
+
+.dashboard {
+  top: 51px;
+  height: calc(100vh - 51px);
+}

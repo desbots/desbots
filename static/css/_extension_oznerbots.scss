@@ -1,0 +1,403 @@
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-draggable {
+  z-index: 9999999;
+  height: 100% !important;
+}
+
+#loading {
+  img { width: 100%; }
+}
+
+#authorization-container {
+  z-index: 9999999;
+  grid-template-columns: 58% auto;
+  background-position: center;
+  padding: 0;
+
+  #authorization-actions {
+    display: grid;
+    align-content: center;
+    height: 100%;
+    padding: 0;
+  }
+
+  #user-login, #registration {
+    border: 0;
+    background: #101111a8;
+    width: 90%;
+    margin: auto;
+    white-space: nowrap;
+
+    #forgot-password { opacity: 0; }
+
+    img {
+      display: none;
+      margin: 0;
+      width: 28%;
+
+      &.logo-name { margin-top: -155px; }
+    }
+
+    input { margin-bottom: 30px; }
+    input, button { font-size: 14px; }
+
+    button[type="submit"] {
+      background: #1a1ae3;
+      border: 1px solid #121262;
+      color: #d4d4ff;
+
+      &:hover {
+        background: #121291;
+        color: #bdbdc3;
+      }
+    } 
+  }
+}
+
+
+#blocklyDiv .blocklyToolboxDiv:first-child {
+  background: black !important;
+  display: grid;
+
+  & > img {
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    justify-self: center;
+    margin-top: 40px;
+    width: 100%;
+    max-width: initial;
+  }
+
+  div {
+    padding: 13px 20px;
+
+    &#user-data {
+      padding: 0;
+      display: grid;
+      grid-template-areas: "avatar name";
+      position: fixed;
+      background: black;
+      color: white;
+      width: 100%;
+      height: 55px;
+      grid-template-columns: auto min-content min-content;
+      grid-gap: 12px;
+      align-content: center;
+      padding-right: 20px;
+
+      &.panel { background: transparent; }
+
+      #user-avatar {
+        grid-area: avatar;
+        margin: 0;
+        width: 29px;
+        justify-self: end;
+        align-self: center;
+      }
+
+      #user-name {
+        grid-area: name;
+        font-size: 18px;
+        align-self: center;
+        inline-size: max-content;
+      }
+
+      #user-email {
+        grid-area: email;
+        margin: 0 30px;
+        display: none;
+      }
+
+      #user-allowed-until { grid-area: allowed; }
+      #user-subscription-plan { grid-area: plan; }
+
+      #user-allowed-until, #user-subscription-plan {
+        margin-right: 20px;
+        display: none;
+      }
+    }
+
+    &.side-button, a { color: white; }
+    
+    &.side-button {
+      display: grid;
+      align-content: center;
+      grid-template-columns: min-content auto;
+      align-items: center;
+      grid-gap: 18px;
+
+      &:hover { background: #484848; }
+      &.active { background: #6d00bf; }
+      &:hover, &.active { color: white; }
+      span { transition: 0s; }
+    }
+
+    &#user-logout {
+      color: white;
+
+      &:hover { background: #400000; }
+    }
+
+    &.external { display: none; }
+  }
+
+  &.hidden {
+    width: 60px !important;
+    text-align: center;
+    min-width: 0;
+
+    & > img {
+      margin: 70px 0 0 0px;
+      align-self: initial;
+      justify-self: initial;
+      width: 78%;
+    }
+
+    div.side-button {
+      &.external { display: none; }
+
+      span {
+        position: absolute;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+#active-section {
+  position: fixed;
+  top: 0;
+  font-size: 24px;
+  padding: 10px 20px;
+  right: 0;
+  z-index: 999;
+  color: white;
+  border-bottom: 0.063em solid lightgray;
+  width: 100%;
+  display: grid;
+  grid-template-columns: min-content auto;
+
+  #toggle-sidebar { z-index: 99; }
+
+  #show-sidebar, #hide-sidebar {
+    transition: 0s;
+    margin-top: 2px;
+  }
+
+  h1 { display: none; }
+  
+  #toggle-sidebar:hover {
+    cursor: pointer;
+    color: gray;
+  }
+
+  &:not(.hidden) {
+    #show-sidebar { display: none; }
+    #hide-sidebar { display: inline; }
+  }
+
+  &.hidden {
+    #show-sidebar { display: inline; }
+    #hide-sidebar { display: none; }
+  }
+
+  &.panel {
+    color: white;
+    background: transparent;
+    border: 0;
+  }
+
+  #header-logo {
+    position: absolute;
+    height: 55px;
+    width: 100%;
+    text-align: center;
+
+    img {
+      height: 100%;
+      margin-top: -2px;
+    }
+  }
+}
+
+#topbar {
+  top: auto;
+  bottom: 0;
+  z-index: 99;
+  border-top: 1px solid #dedede;
+}
+
+#toolbox {
+  top: 56px;
+  padding: 3px;
+  padding-left: 15px;
+  z-index: 99999;
+
+  &.hidden-toolbox {
+    z-index: -1;
+    display: none;
+  }
+
+  .toolbox-button {
+    background: transparent;
+    color: white;
+  }
+  
+  #toolbox-robot-icon {
+    color: white;
+    padding: 0 2px 0 6px;
+
+    svg { margin-bottom: -2px; }
+  }
+}
+
+#topbar, #toolbox {
+  background: #201e1f;
+  width: calc(100% - 210px);
+  right: 0;
+}
+
+#header {
+  right: 29px;
+  top: 60px;
+  z-index: 999999;
+
+  &.hidden-header {
+    z-index: -1;
+    display: none;
+  }
+}
+
+#login { font-size: 12px; }
+
+.dashboard {
+  top: 55px;
+  height: calc(100vh - 55px);
+}
+
+@media only screen and (max-width: 1080px) {
+  .dashboard {
+    &#home-section {
+      h1 { font-size: 18px !important; }
+      h2 { font-size: 11px !important; }
+    }
+  }
+}
+
+.dashboard {
+  &#home-section {
+    .home-section-item {
+      .home-section-content {
+        h1 { color: #a76ad5; }
+
+        div {
+          button {
+            border: 1px solid #6d00bf;
+
+            a {
+              color: white;
+              text-decoration: none;
+              font-weight: normal;
+            }
+
+            &:hover {
+              background: #350f52;
+              border: 1px solid #7d2eb9;
+              color: lightgray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  #header {
+    top: 7px;
+    right: 198px;
+  }
+
+  .dashboard {
+    &#home-section {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(4, 1fr);
+
+      .home-section-item {
+        .home-section-content {
+          background: #0000004d;
+          height: 100%;
+          display: grid;
+        }
+      }
+    }
+
+    &#tutorials-section {
+      #tutorial-display { grid-template-columns: 60% auto; }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #authorization-container {
+    grid-template-columns: 33% auto;
+
+    #authorization-headings { opacity: 0; }
+  }
+
+  #header { right: 84px; }
+
+  #blocklyDiv .blocklyToolboxDiv:first-child {
+    div {
+      &#user-data {
+        div { display: none; }
+      }
+    }
+  }
+
+  .dashboard {
+    &#profile-section {
+      #profile-form {
+        grid-template-columns: auto;
+        grid-template-rows: min-content auto;
+        grid-template-areas: "profile-avatar" "profile-data";
+
+        .profile-section {
+          &:nth-child(1) { grid-area: profile-data; }
+
+          &:nth-child(2) {
+            grid-area: profile-avatar;
+            width: min-content;
+            justify-self: center;
+            padding: 20px 50px;
+          }
+        }
+      }
+    }
+  }
+}  
+
+@media only screen and (max-width: 750px) {
+  .dashboard {
+    &#tutorials-section {
+      #tutorial-display {
+        grid-template-columns: auto;
+        grid-template-rows: 60% auto;
+
+        #tutorials-nav { border-top: 1px solid lightgray; }
+      }
+    }
+  }
+}  
+
+@media only screen and (max-width: 600px) {
+  #authorization-container {
+    grid-template-columns: 0% 100%;
+
+    #user-login, #registration {
+      img { width: 20%; }
+    }
+
+    #authorization-actions { border: 0; }
+  }
+}  
